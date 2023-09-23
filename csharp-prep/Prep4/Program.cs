@@ -25,21 +25,43 @@ class Program
 
         int sum = 0;
         int largestNum = 0;
+        int minPos = 999999;
         
         foreach (int number in numbers)
         {
+            
+            // Compute the sum
             sum += number;
 
+            // Finding the largest number
             if (number > largestNum)
             {
                 largestNum = number;
             }
+
+            // Finding the smallest positive number
+            if ((number < minPos) && (number > 0))
+            {
+                minPos = number;
+            }
         }
 
+        // Compute the average
         float average = ((float)sum) / numbers.Count;
         
         Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The average is: {average}");
         Console.WriteLine($"The largest number is: {largestNum}");
+        Console.WriteLine($"The smallest positive number is: {minPos}");
+
+        // Sorting the list
+        numbers.Sort();
+
+        Console.WriteLine($"The sorted list is: ");
+
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
     }
 }
