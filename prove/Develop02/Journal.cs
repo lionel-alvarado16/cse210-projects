@@ -29,6 +29,8 @@ public class Journal
 
     public List<Entry> LoadFile()
     {
+        List<Entry> savedEntries = new List<Entry>();
+        
         Console.Write("What is the filename? ");
         string fileName = Console.ReadLine();
         string[] lines = System.IO.File.ReadAllLines(fileName);
@@ -40,8 +42,10 @@ public class Journal
             Entry newEntry = new Entry();     
             newEntry._prompt = parts[0];
             newEntry._entry = parts[1];
-            _entries.Add(newEntry);
+            savedEntries.Add(newEntry);
         }
+
+        _entries = savedEntries;
 
         return _entries;
     }
