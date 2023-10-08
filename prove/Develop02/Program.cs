@@ -39,5 +39,9 @@ class Program
             }
         }
         while (choice != "5");
+
+        // Exceeding Requirements
+        // To exceed the requirements I saved other information in the Journal entry.
+        // In this case I added the entry time.
     }
 }
