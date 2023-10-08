@@ -12,8 +12,14 @@ public class Journal
         string prompt = newPrompt.Prompt();
         Console.WriteLine(prompt);
 
+        DateTime currentTime = DateTime.Now;
+        string date = currentTime.ToShortDateString();
+        string time = currentTime.ToShortTimeString();
+
         Entry newEntry = new Entry();
         newEntry._prompt = prompt;
+        newEntry._date = date;
+        newEntry._time = time;
         newEntry._entry = Console.ReadLine();
         _entries.Add(newEntry);
     }
@@ -41,7 +47,9 @@ public class Journal
             
             Entry newEntry = new Entry();     
             newEntry._prompt = parts[0];
-            newEntry._entry = parts[1];
+            newEntry._date = parts[1];
+            newEntry._time = parts[2];
+            newEntry._entry = parts[3];
             savedEntries.Add(newEntry);
         }
 
@@ -59,7 +67,7 @@ public class Journal
         {
             foreach (Entry ent in _entries)
             {
-                outputFile.WriteLine($"{ent._prompt}~{ent._entry}");
+                outputFile.WriteLine($"{ent._prompt}~{ent._date}~{ent._time}~{ent._entry}");
             }
         }
     }
