@@ -9,5 +9,16 @@ public class Scripture
     {
         _reference = reference;
 
+        List<Word> words = new List<Word>();
+
+        string[] parts = textScripture.Split(" ");
+
+        foreach (string word in parts)
+        {
+            Word newWord = new Word(word);
+            words.Add(newWord);
+        }
+
+        _words = words;
     }
 }
