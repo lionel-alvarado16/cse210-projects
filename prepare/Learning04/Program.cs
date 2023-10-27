@@ -6,12 +6,12 @@ class Program
     {
         // Console.WriteLine("Hello Learning04 World!");
 
-        // Assignment assignment = new Assignment("Samuel Bennett", "Multiplication");
-        // Console.WriteLine(assignment.GetSummary());
+        Assignment assignment = new Assignment("Samuel Bennett", "Multiplication");
+        Console.WriteLine(assignment.GetSummary());
 
-        // MathAssignment mathAssignment = new MathAssignment("Samuel Bennett", "Multiplication", "7.3", "8-19");
-        // Console.WriteLine(mathAssignment.GetSummary());
-        // Console.WriteLine(mathAssignment.GetHomeworkList());
+        MathAssignment mathAssignment = new MathAssignment("Samuel Bennett", "Multiplication", "7.3", "8-19");
+        Console.WriteLine(mathAssignment.GetSummary());
+        Console.WriteLine(mathAssignment.GetHomeworkList());
 
         WritingAssignment writingAssignment = new WritingAssignment("Mary Water", "European History", "The Causes of World War II");
         Console.WriteLine(writingAssignment.GetSummary());
