@@ -10,4 +10,17 @@ public class Word
         _word = textWord;
         _hidden = true;
     }
+
+    public void ShowWord()
+    {
+        Console.Write($"{_word} ");
+    }
+
+    public void HideWord()
+    {
+        foreach (char letter in _word)
+        {
+            Console.Write("_");
+        }
+    }
 }

@@ -37,8 +37,7 @@ class Program
             {
                 journal.SaveFile();
             }
-        }
-        while (choice != "5");
+        } while (choice != "5");
 
         // Exceeding Requirements
         // To exceed the requirements I saved other information in the Journal entry.

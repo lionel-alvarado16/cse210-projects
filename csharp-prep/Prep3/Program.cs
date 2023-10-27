@@ -42,7 +42,7 @@ class Program
                 }
 
                 track ++;
-            }while (guessNumber != magicNumber);
+            } while (guessNumber != magicNumber);
             Console.WriteLine($"You made {track} guesses.");
             Console.Write("Do you want to continue? ");
             response = Console.ReadLine();

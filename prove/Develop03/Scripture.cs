@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class Scripture
 {
@@ -20,5 +21,21 @@ public class Scripture
         }
 
         _words = words;
+    }
+
+    public void GetRenderedText()
+    {
+        Console.Clear();
+        Console.Write($"{_reference} ");
+        foreach (Word w in _words)
+        {
+            w.ShowWord();
+        }
+        Console.WriteLine();
+    }
+
+    public void HideWords()
+    {
+        
     }
 }
