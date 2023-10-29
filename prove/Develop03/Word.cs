@@ -13,14 +13,23 @@ public class Word
 
     public void ShowWord()
     {
-        Console.Write($"{_word} ");
+        if (_hidden == true)
+        {
+            Console.Write($"{_word} ");
+        }
     }
 
     public void HideWord()
     {
-        foreach (char letter in _word)
+        _hidden = false;
+        
+        if (_hidden == false)
         {
-            Console.Write("_");
+            foreach (char letter in _word)
+            {
+                Console.Write("_");
+            }
+            Console.Write(" ");
         }
     }
 }
