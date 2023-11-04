@@ -47,6 +47,8 @@ public class ListingActivity : Activity
             responses.Add(response);
         }
 
+        int elements = responses.Count;
+        Console.WriteLine($"You listed {elements} items.");
         Console.WriteLine();
     }
 
