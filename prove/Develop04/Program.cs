@@ -22,7 +22,6 @@ class Program
             if (choice == "1")
             {
                 Console.Clear();
-                
                 BreathingActivity breathingActivity = new BreathingActivity();
                 breathingActivity.RunActivity();
             }
@@ -30,7 +29,6 @@ class Program
             if (choice == "2")
             {
                 Console.Clear();
-                
                 ReflectionActivity reflectionActivity = new ReflectionActivity();
                 reflectionActivity.RunActivity();
             }
@@ -38,7 +36,6 @@ class Program
             if (choice == "3")
             {
                 Console.Clear();
-                
                 ListingActivity listingActivity = new ListingActivity();
                 listingActivity.RunActivity();
             }
