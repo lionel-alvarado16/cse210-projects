@@ -90,7 +90,7 @@ public class Activity
         _activityDuration = int.Parse(Console.ReadLine());
         Console.Clear();
         Console.WriteLine("Get ready...");
-        PausingShowingSpinner(7);
+        PausingShowingSpinner(5);
         Console.WriteLine();
     }
 
